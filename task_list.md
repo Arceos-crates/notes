@@ -77,10 +77,10 @@
 #### 写各个app模块的CI：
 
 - [x] 完成helloworld模块的CI
-- [ ] 完成exception模块的CI
+- [x] 完成exception模块的CI
 - [ ] 完成shell模块的CI
 - [ ] 完成display模块的CI
-- [ ] 完成memtest模块的CI
+- [x] 完成memtest模块的CI
 - [ ] 完成bwbench模块的CI
 - [ ] 完成echoserver模块的CI
 - [x] 完成httpclient模块的CI
@@ -90,4 +90,4 @@
 - [ ] 完成priority模块的CI
 - [ ] 完成sleep模块的CI
 - [ ] 完成tls模块的CI
-- [ ] 完成yield模块的CI
+- [x] 完成yield模块的CI

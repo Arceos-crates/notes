@@ -6,7 +6,7 @@
 
 **对于build.yml：**
 
-删除了jobs中的clippy，删除了其它架构只保留了riscv64，删除了steps下的其它的构建文件的步骤只保留了build helloworld,最后修改了启动的cmd命令：
+删除了其它架构只保留了riscv64，删除了steps下的其它的构建文件的步骤只保留了build helloworld,最后修改了启动的cmd命令：
 
 ```yml
     steps:
@@ -23,6 +23,12 @@
         use-tool-cache: true
     - name: Build helloworld
       run: CURRENT_DIR=`pwd` make ARCH=${{ matrix.arch }} A=apps/helloworld
+```
+
+修复了job clippy 的bug，因为调用了script/make/cargo.mk中的方法：
+
+```
+
 ```
 
 **对于test.yml：**
