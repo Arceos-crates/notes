@@ -86,8 +86,8 @@
 - [x] 完成httpclient模块的CI
 - [ ] 完成httpserver模块的CI
 - [ ] 完成udpserver模块的CI
-- [ ] 完成parallel模块的CI
-- [ ] 完成priority模块的CI
-- [ ] 完成sleep模块的CI
-- [ ] 完成tls模块的CI
+- [x] 完成parallel模块的CI
+- [x] 完成priority模块的CI
+- [x] 完成sleep模块的CI
+- [x] 完成tls模块的CI
 - [x] 完成yield模块的CI
