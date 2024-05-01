@@ -65,7 +65,7 @@ elseif [ -z "$1" ]; then
     test_list=(
         "apps/helloworld"
     )
-else
+else构建httpserver、udpserver和echoserver的难点和方法
 ```
 
 对net/httpclient的修改是类似的。
@@ -80,3 +80,16 @@ test_one "SMP=4 LOG=info" "expect_info_smp4.out"
 ```
 
 将跑完之后的info输出与预期输出对比，一样就通过了。
+
+
+
+### 构建httpserver、udpserver和echoserver的难点和方法
+
+​	这几个应用都是作为服务器等待客户机访问，一直不停机，不利于测试，并且需要其它主机访问才能测试其信息是否有问题。这里在测试机的ubuntu上创建了另一个线程等服务器创建好后发出ping，比对actual和expect的输出，同时，这里需要修改test.sh将time_out也视为一种可以进行比对的情况。
+
+
+
+### 构建bwbench的难点和方法
+
+​	难点在于有一个显示带宽的输出，而每次测试带宽大小都不一样，再加上每一次测试输出的行数也不一样，所以直接比对必然失败，这里修改比对脚本使用了折中方案，让每一行比对的信息大致相同（不同字符数量少于10个，表示速度的数字就是有10个）即算该行比对成功，最后也是可以顺利通过测试。
+
